@@ -7,14 +7,11 @@ Graph Neural Networks are a class of neural networks designed to work with struc
 
 This work addresses the challenges of designing a pooling layer for irregular, unordered graph structures by proposing an **edge-based pooling layer**.
 
-
 ## **Objective**
 To develop a GNN pooling layer that:
 - Clusters nodes based on graph topology without needing a predefined number of clusters.
 - Optimizes the **minCUT problem** to identify meaningful communities within graphs.
 - Achieves competitive or superior performance compared to state-of-the-art methods in tasks like graph and node classification.
-
-
 
 ## **Methodology**
 
@@ -23,16 +20,13 @@ To develop a GNN pooling layer that:
 - **Edge Cutting**: Removes edges with the lowest scores to separate the graph into connected components. Each component becomes a "super node" in the pooled graph.
 - **Regularization**: Incorporates a term that minimizes the **Normalized Cut (Ncut)**, ensuring edges are removed consistently with the graph's topology.
 
-### **Graph Neural Network Architecture**
+##**Graph Neural Network Architecture**
 The pooling layer was integrated into a GNN pipeline that performs:
 1. **Graph Convolution**: Propagates information across nodes.
 2. **Edge Scoring and Cutting**: Identifies less informative edges for removal.
 3. **Super Node Creation**: Groups nodes into communities based on the remaining graph structure.
 
-
-
 ## **Applications**
-
 ### **Graph Classification**
 - **Datasets**:
   - Bioinformatics datasets: PROTEINS, D&D.
@@ -51,7 +45,7 @@ The pooling layer was integrated into a GNN pipeline that performs:
   - Split edges into training, validation, and test sets.
   - Evaluated using Graph U-Net architecture (Gao & Ji, 2019).
 - **Results**:
-  - Demonstrated accuracy improvement with the regularization term.
+  - Improved accuracy with the regularization term.
 
 
 
@@ -82,29 +76,19 @@ The pooling layer was integrated into a GNN pipeline that performs:
 | PubMed        | 78.7%                 | 79.1%              |
 
 
-
-## **Supplementary Material**
-
-### **Presentation**
-You can view the project presentation [here](./path-to-presentation-file.pptx).  
-(Replace `./path-to-presentation-file.pptx` with the actual file path in your repository, e.g., `presentation/Graph_Pooling_Edge_Cut.pptx`.)
-
-### **Article**
-The research article associated with this project is available [here](./path-to-article.pdf).  
-(Replace `./path-to-article.pdf` with the actual file path in your repository, e.g., `docs/Graph_Pooling_Edge_Cut.pdf`.)
-
-
-
-## **Conclusion**
-This project introduced a novel edge-based pooling technique for graph neural networks that effectively clusters nodes by cutting edges with minimal importance. The method was benchmarked against state-of-the-art techniques, demonstrating its competitive performance and potential for solving graph-related machine learning tasks.
-
-
-## **Acknowledgments**
-This project was conducted as part of engineering studies and reflects a collaborative effort in exploring advanced topics in machine learning and graph analysis.
-
 ## **Supplementary Material**
 Presentation
 The project presentation is included in this repository: Graph_Pooling_Edge_Cut.pptx.
 
 Article
 The research article is included in this repository: Graph_Pooling_Edge_Cut.pdf.
+
+
+## **Conclusion**
+This project introduced a novel edge-based pooling technique for graph neural networks that effectively clusters nodes by cutting edges with minimal importance. The method was benchmarked against state-of-the-art techniques, demonstrating its competitive performance and potential for solving graph-related machine-learning tasks.
+
+
+## **Acknowledgments**
+This project was conducted as part of engineering studies and reflects a collaborative effort to explore advanced topics in machine learning and graph analysis.
+
+
